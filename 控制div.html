@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>控制div属性</title>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+				text-align: center;
+			}
+			
+			#content {
+				width: 600px;
+				height: 150px;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				margin: 0 auto;
+				border: 10px solid cornflowerblue;
+				border-radius: 30px;
+			}
+			
+			button {
+				width: 100px;
+				height: 60px;
+				font-size: 30px;
+				line-height: 30px;
+				background: #000000;
+				color: #ffffff;
+				border-radius: 15px;
+				outline: none;
+				border: none;
+			}
+			
+			#box {
+				width: 200px;
+				height: 200px;
+				border-radius: 10px;
+				background: black;
+				margin: 40px auto 0;
+				transition: all .5s;
+			}
+		</style>
+		<script type="text/javascript">
+			//笨办法
+			/*
+			window.onload = function() {
+				var oW = document.getElementById("widthp");
+				var oH = document.getElementById("heightp");
+				var oC = document.getElementById("color");
+				var oHi = document.getElementById("hidden");
+				var oR = document.getElementById("reset");
+				var oDiv = document.getElementById("box");
+
+				oW.onclick = function() {
+					var oldWidth = oDiv.offsetWidth;
+					var newWidth = oldWidth + 100;
+					if(oldWidth == 500) {
+						oldWidth = 500;
+					} else {
+						oDiv.style.width = newWidth + 'px';
+					}
+				}
+				oH.onclick = function() {
+					var oldHeight = oDiv.offsetHeight;
+					var newHeight = oldHeight + 100;
+					if(oldHeight == 500) {
+						oldHeight = 500;
+					} else {
+						oDiv.style.height = newHeight + 'px';
+					}
+				}
+				var flag = 0;
+				oC.onclick = function() {
+					if(flag == 0) {
+						oDiv.style.backgroundColor = 'red';
+						flag = 1;
+					} else {
+						oDiv.style.backgroundColor = 'black';
+						flag = 0;
+					}
+				}
+				var flag1 = 0;
+				oHi.onclick = function() {
+					if(flag1 == 0) {
+						oDiv.style.display = 'none';
+						flag1 = 1;
+					} else {
+						oDiv.style.display = 'block';
+						flag1 = 0;
+					}
+				}
+				oR.onclick = function() {
+					oDiv.style.height = '200px';
+					oDiv.style.width = '200px';
+					oDiv.style.background = 'black';
+					oDiv.style.display = 'block';
+					flag1 = 0;
+					flag = 0;
+				}
+			}
+			*/
+			
+			//函数式方法
+			var changeStyle = function (elem, attr, value) {
+				elem.style[attr] = value; 
+			}; 
+			window.onload = function () {
+				var oBtn = document.getElementsByTagName("button"); 
+				var oDiv = document.getElementById("box"); 
+				var oAtt = ["width","height","background","display","display"]; 
+				var oVal = ["400px","400px","red","none","block"]; 
+				for (var i = 0; i < oBtn.length; i++) { 
+					oBtn[i].index=i ;
+					oBtn[i].onclick=function () { 
+						this.index==oBtn.length - 1 && (oDiv.style.cssText=""); 
+						changeStyle(oDiv, oAtt[this.index], oVal[this.index]); 
+					} 
+				} 
+			};
+		</script>
+	</head>
+
+	<body>
+		<div id="content">
+			<button id="widthp">变宽</button>
+			<button id="heightp">变高</button>
+			<button id="color">变色</button>
+			<button id="hidden">隐藏</button>
+			<button id="reset">重置</button>
+		</div>
+		<div id="box"></div>
+	</body>
+
+</html>
