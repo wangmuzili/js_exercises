@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            var oBtn = document.getElementsByTagName('button')[0];
+            var oTxt = document.getElementsByTagName('input')[0];
+            var oSpan = document.getElementsByTagName('span')[0];
+            oBtn.onclick = function () {
+                oTxt.value = oTxt.value;
+                var sum = 0;
+                var arr = oTxt.value.split(",");
+                for (var i in arr) {
+                    sum += parseInt(arr[i])
+                }
+                oSpan.innerHTML = sum;
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text"> 格式:1,2,3,4,5 
+    <br>
+    <button>求和</button>
+    <span></span>
+</body>
+
+</html>
