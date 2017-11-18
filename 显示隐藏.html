@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.onload= function(){
+            var oBtn = document.getElementById('change');
+            var oUl = document.getElementById('con');
+            var oClose = document.getElementById('close');
+            var style = oUl.style;
+            oBtn.onclick = function(){
+                style.display = (style.display == 'block'?'none':'block');
+            }
+            oClose.onclick = function(){
+                oUl.style.display = 'none';
+            }
+        }
+    </script>
+    <style>
+        p{
+            text-align: center;
+            margin: 0;
+        }
+        #con{
+            background: gold;
+            display: none;
+            width: 300px;
+            margin:0 auto;
+            margin-left: calc(50%);
+        }
+        #close{
+            cursor: pointer;
+        }
+        button{
+            width: 60px;
+        }
+
+    </style>
+</head>
+<body>
+    <p><button id='change'>显示</button></p>
+    <ul id="con" >
+        <li>第一</li>
+        <li>第二</li>
+        <li id="close">关闭</li>
+    </ul>
+</body>
+</html>
