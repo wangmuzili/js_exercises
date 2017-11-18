@@ -1,0 +1,13 @@
+ul li{
+    background: black;
+}
+body{
+    background: #333333;
+}
+
+#black span{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #ffffff;
+}

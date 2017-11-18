@@ -1,0 +1,13 @@
+ul li{
+    background: green;
+}
+body{
+    background: greenyellow;
+}
+
+#green span{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #ffffff;
+}

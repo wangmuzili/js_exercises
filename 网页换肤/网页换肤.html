@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="1.css">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        div {
+            width: 200px;
+            margin: 100px auto 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        button {
+            width: 30px;
+            height: 30px;
+            border: 0;
+            border-radius: 5px;
+        }
+        
+        #red {
+            background: red;
+        }
+
+        #green {
+            background: green;
+        }
+
+        #black {
+            background: black;
+        }
+
+        ul {
+            width: 500px;
+            margin: 50px auto;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        ul li {
+            float: left;
+            width: 80px;
+            border: 1px solid #ffffff;
+            box-sizing: border-box;
+        }
+
+        ul li a {
+            display: inline-block;
+            height: 40px;
+            font-size: 20px;
+            line-height: 40px;
+            text-decoration: none;
+            color: #ffffff;
+        }
+        ul li a:hover{
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var aButton = document.getElementsByTagName('button');
+            var aSpan = document.getElementsByTagName('span');
+            var oLink = document.getElementsByTagName('link')[0];
+            for (var i = 0; i < aButton.length; i++) {
+                aButton[i].index = i;
+                aButton[i].onclick = function(){
+                    // alert(this.index);
+                    oLink.href = this.index +'.css';
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <button id="red"><span></span></button>
+        <button id="green"><span></span></button>
+        <button id="black"><span></span></button>
+    </div>
+    <ul>
+        <li>
+            <a href="javascript:;">新闻</a>
+        </li>
+        <li>
+            <a href="javascript:;">娱乐</a>
+        </li>
+        <li>
+            <a href="javascript:;">体育</a>
+        </li>
+        <li>
+            <a href="javascript:;">电影</a>
+        </li>
+        <li>
+            <a href="javascript:;">音乐</a>
+        </li>
+        <li>
+            <a href="javascript:;">旅游</a>
+        </li>
+    </ul>
+</body>
+
+</html>
