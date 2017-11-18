@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            var oToggle = document.getElementById('toggle');
+            var oUl = document.getElementsByTagName('ul')[0];
+            oToggle.onclick = function(){
+                oUl.style.display = oUl.style.display == 'block'?'none':'block';
+            }
+        }
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+        }
+        ul {
+            list-style: none;
+            width: 250px;
+            display: none;
+        }
+        a{
+            display: inline-block;
+            height: 20px;
+            width: 245px;
+            text-decoration: none;
+            color: #6b7980;
+            padding: 5px;
+            font-size: 15px;
+            line-height: 20px;
+        }
+        a:hover{
+            background: #ffffff;
+            text-decoration: underline;
+        }
+        #wrap{
+            width: 250px;
+            margin: 100px auto 0;
+            background: #e9edf2;
+            border: 1px solid #333333;
+        }
+        h2{
+            font-size: 20px;
+            padding: 5px;
+            border: 1px solid #ffffff;
+            border-left: 0;
+            border-right: 0;
+            cursor: pointer;
+            user-select: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <h2 id="toggle">播放列表...</h2>
+        <ul>
+            <li>
+                <a href="javascript:;">玩家之徒 - 蔡依林</a>
+            </li>
+            <li>
+                <a href="javascript:;">原谅我就是这样的女生 - 戴佩妮</a>
+            </li>
+            <li>
+                <a href="javascript:;">猜不透 - 丁当</a>
+            </li>
+            <li>
+                <a href="javascript:;">自导自演 - 周杰伦</a>
+            </li>
+            <li>
+                <a href="javascript:;">浪漫窝 - 弦子</a>
+            </li>
+            <li>
+                <a href="javascript:;">流年 - 王菲</a>
+            </li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
