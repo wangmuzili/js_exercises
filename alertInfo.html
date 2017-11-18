@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>点击显示内容</title>
+    <script>
+        window.onload = function () {
+            var aDiv = document.getElementsByTagName('div');
+            for (var i = 0; i < aDiv.length; i++) {
+                aDiv[i].onclick = function () {
+                    alert(this.innerHTML);
+                }
+            }
+        }
+    </script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            width: 500px;
+            border: 2px solid #dddddd;
+            margin: 0 auto 20px;
+        }
+
+        div:first-child {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div><strong>1.</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis provident voluptatem illo rerum eveniet porro rem
+        explicabo amet nam aperiam asperiores corporis a delectus, facere dicta? Est temporibus alias dolorum!</div>
+    <div><strong>2.</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis provident voluptatem illo rerum eveniet porro rem
+        explicabo amet nam aperiam asperiores corporis a delectus, facere dicta? Est temporibus alias dolorum!</div>
+    <div><strong>3.</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis provident voluptatem illo rerum eveniet porro rem
+        explicabo amet nam aperiam asperiores corporis a delectus, facere dicta? Est temporibus alias dolorum!</div>
+    <div><strong>4.</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis provident voluptatem illo rerum eveniet porro rem
+        explicabo amet nam aperiam asperiores corporis a delectus, facere dicta? Est temporibus alias dolorum!</div>
+</body>
+
+</html>
