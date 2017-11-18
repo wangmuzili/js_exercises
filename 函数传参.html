@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        #box {
+            width: 100px;
+            height: 100px;
+            background: black;
+            margin: 40px auto 0;
+        }
+    </style>
+    <script>
+        var changeStyle = function (elem, name, value) {
+            elem.style[name] = value;
+        }
+
+        window.onload = function () {
+            // var aN = document.getElementById('attrName');
+            // var aV = document.getElementById('attrValue');
+            // var oS = document.getElementById('submit');
+            // var oR = document.getElementById('reset');
+            // var oDiv = document.getElementById('box');
+            // oS.onclick = function(){
+            //     oDiv.style[aN.value] = aV.value;
+            // }
+
+            var oDiv = document.getElementById("box");
+            var oBtn = document.getElementsByTagName("button");
+            var oInput = document.getElementsByTagName("input");
+            oBtn[0].onclick = function () {
+                    changeStyle(oDiv, oInput[0].value, oInput[1].value);
+                },
+                oBtn[1].onclick = function () {
+                    //删除oDiv的style 属性
+                    oDiv.removeAttribute("style");
+                }
+
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <label>属性名:</label>
+        <input type="text" name="" id="attrName">
+        <label>属性值:</label>
+        <input type="text" name="" id="attrValue">
+    </div>
+    <div>
+        <button id="submit">确定</button>
+        <button id="reset">重置</button>
+    </div>
+    <div id="box">
+
+    </div>
+</body>
+
+</html>
